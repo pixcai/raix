@@ -1,0 +1,28 @@
+{
+  "name": "raix",
+  "version": "1.0.0",
+  "description": "Async request extensions for React",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "roadhog test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixcai/raix.git"
+  },
+  "keywords": [
+    "React",
+    "Request"
+  ],
+  "author": "pixcai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pixcai/raix/issues"
+  },
+  "homepage": "https://github.com/pixcai/raix#readme",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
