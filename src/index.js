@@ -6,7 +6,7 @@ class RaixComponent extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			data: props.init || {}
+			data: isUndefined(props.init) ? {} : props.init
 		}
 	}
 
@@ -62,12 +62,12 @@ RaixComponent.propTypes = {
 }
 
 Object.defineProperty(Raix, 'fetch', {
-	get: () => fetch.library, 
+	get: () => fetch.library,
 	set: library => fetch.library = library
 })
 
 export default function Raix(beforeRequest, afterRequest) {
-	return Component => {
+	return PureComponent => {
 		if (!isFunction(beforeRequest)) {
 			beforeRequest = startRequest => startRequest()
 		}
@@ -75,11 +75,11 @@ export default function Raix(beforeRequest, afterRequest) {
 			afterRequest = result => true
 		}
 
-		return ({component, ...others}) => (
+		return ({Component, ...others}) => (
 			<RaixComponent
 				beforeRequest={beforeRequest}
 				afterRequest={afterRequest}
-				Component={Component}
+				Component={PureComponent}
 				{...others}
 			/>
 		)
