@@ -1,0 +1,19 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "raix example",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "roadhog test",
+    "start": "roadhog server"
+  },
+  "keywords": [
+    "raix",
+    "React"
+  ],
+  "author": "pixcai",
+  "license": "MIT",
+  "devDependencies": {
+    "roadhog": "^0.5.3"
+  }
+}
