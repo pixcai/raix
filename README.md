@@ -26,7 +26,7 @@ export default Raix(beforeRequest, afterRequest)(Example)
 ```
 ### init, data, formatter
 example:
-```
+```js
 const init = {name: 'example'}
 const data = {url: 'http://localhost:8000/api/test'}
 const formatter = result => result.data
